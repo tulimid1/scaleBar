@@ -4,69 +4,98 @@ title: MATLAB
 permalink: /MATLAB/
 ---
 
-# [function](https://function_link.com) 
+# [scaleBar](https://github.com/tulimid1/scaleBar/blob/main/scaleBar.m) 
 ---
 
-Description. See [function_main.mlx](https://function_main.mlx) for a notebook of given examples. 
+Add scale bar instead of axes. See [usingScaleBar.m](https://github.com/tulimid1/scaleBar/blob/main/usingScaleBar.m) for a script of given examples. 
 
 ## Syntax
 ---
-[outarg = function(inarg1, inarg2)](#a)
+[scaleBar(Name, Value)](#a)
 
-[outarg = function(inarg1, inarg2, Name, Value)](#b)
+[sb = scaleBar(Name, Value)](#b)
 
 ## Description
 ---
 ### A
-[outarg](#outarg) = function([inarg1](#inarg1), [inarg2](#inarg2)) returns a ... . [example](#example-1)
+scaleBar() sets the current axes invisible and addes bars and text for scale bar. [example](#example-1)
 
 ### B
-[outarg](#outarg) = function([inarg1](#inarg1), [inarg2](#inarg2), [Name, Value)](#name-value-arguments) returns ... with additional options specified by one or more name-value pair arguments. For example, you can do this or that. [example](#example-2)
+[sb](#sb) = scaleBar([Name, Value)](#name-value-arguments) returns the scale bar object with additional options specified by one or more name-value pair arguments. For example, you can specify the number of decimal places for the label. [example](#example-2)
 
 ## Examples 
 ---
 ### Example 1
-Description
+Add default scale bar to axes. 
 
-    CODE
+    figure();
+    x = linspace(0, 2*pi, 1e3);
+    y = sin(x);
+    plot(x, y);
+    scaleBar(); 
+    auto_save('ex1a'); 
     
-![fig1](/assets/fig1M.png)
+![fig1](/assets/figures/ex1a.png)
     
 ### Example 2
-Description
+Add scale bar with number labels that have 3 decimals. 
 
-    CODE
+    figure();
+    x = linspace(0, 2*pi, 1e3);
+    y = sin(x);
+    plot(x, y);
+    scaleBar('numDecimals', 3); 
+    auto_save('ex2a'); 
     
-![fig2](/assets/fig2M.png)
-
-## Input Arguments
----
-### ```inarg1```
-Short description
-
-Long description
-
-Data Types: (X, Y)
-
-### ```inarg2```
-Short description
-
-Long description
-
-Data Types: (X, Y)
+![fig2](/assets/figures/ex2a.png)
 
 ### Name-Value Arguments
 
-Specified optional comma-separated pairs of ```Name,Value``` arguments. ```Name``` is the is the argument name and ```Value``` is the corresponding value. ```Name``` musta ppear inside single or double quotes. You can specify several name and value pair arguments in any order as ```Name1,Value1,...,NameN,ValueN```. 
+Specified optional comma-separated pairs of ```Name,Value``` arguments. ```Name``` is the is the argument name and ```Value``` is the corresponding value. ```Name``` must appear inside single or double quotes. You can specify several name and value pair arguments in any order as ```Name1,Value1,...,NameN,ValueN```. 
 
-**Example**: ```'name1', value1, 'name2', value2``` specifies blah blah blah.
+**Example**: ```'numDecimals', 3, 'xBarOnly', true``` specifies only a bar on the x-axis with a 3 decimal label. 
 
-### ```name1```
-Short description (default=X)
+### ```ax```
+Axes to plot on. (default = gca())
 
-Long description
+Specify axes handle to add scale bar on. 
 
-Data Types: (X, Y)
+Data Types: (scalar, axes handle)
+
+### ```barLength```
+Length of scale bars. (default = distance between ticks on input axes)
+
+1 x 2 vector of length of scale bar lines. 
+
+Data Types: (vector [1 x 2], numeric, postive)
+
+### ```barOrigin```
+Origin of bar. (default = lower left corner of axes)
+
+1 x 2 vector of bar origin defined in units of current axes. 
+
+Data Types: (vector [1 x 2], numeric)
+
+### ```xUnitsStr```
+String for x-units (default = '')
+
+String to display as x units. 
+
+Data Types: (string)
+
+### ```yUnitsStr```
+String for y-units (default = '')
+
+String to display as y units. 
+
+Data Types: (string)
+
+### ```numDecimals```
+Numeric label decimals (default = 2)
+
+Number of decimals to display for label. 
+
+Data Types: (scalar, numeric, positive)
 
 ### ```name2```
 Short description (default=X)
@@ -75,29 +104,45 @@ Long description
 
 Data Types: (X, Y)
 
+### ```xBarOnly```
+Only plot x scale bar (default = false)
+
+Whether or not to only plot scale bar on x-axis. 
+
+Data Types: (scalar, logical)
+
+### ```yBarOnly```
+Only plot y scale bar (default = false)
+
+Whether or not to only plot scale bar on y-axis. 
+
+Data Types: (scalar, logical)
+
 ## Output
 ---
 
-## ```outarg```
-Short description
+## ```sb```
+Scale bar object. 
 
-Long description
+Object with properties and methods of scale bar. 
 
-Data Types: (X, Y)
+Data Types: (scalar, scaleBar)
 
 ## More About 
 ---
 
+Useful for figures that have axes that have axes that are not super necessary. 
+
 ## Tips 
 ---
 
-I would suggest adding both `function.m` and `functionSignatures.json` to a folder that is in your MATLAB path. The `function.m` contains the function and the `functionSignatures.json` will you give custom suggestions and code completion for when you call `function` in a script or notebook. 
+I would suggest adding both `scaleBar.m` and `functionSignatures.json` to a folder that is in your MATLAB path. The `scaleBar.m` contains the scaleBar and the `functionSignatures.json` will you give custom suggestions and code completion for when you call `scaleBar` in a script or notebook. 
 
 If you already have a `functionSignatures.json` file in your folder, just add the pertinent code to the original `functionSignatures.json`. 
 
 ## Issues and Discussion
 ---
 
-[Issues](https://github.com/tulimid1/TASK/issues) and [Discussion](https://github.com/tulimid1/TASK/discussions).
+[Issues](https://github.com/tulimid1/scaleBar/issues) and [Discussion](https://github.com/tulimid1/scaleBar/discussions).
 
 If you don't know how to use github (or don't want to), just send me an [email](mailto:tulimid@udel.edu). 
