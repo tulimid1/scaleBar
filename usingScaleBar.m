@@ -107,3 +107,29 @@ plot(x, y);
 scaleBar('barOrigin', [pi -0.2]); 
 darkBackground();
 auto_save('ex5c'); 
+
+%% Change orientaiton 
+
+figure();
+plot(x, y);
+scaleBar('orientation', 'southwest'); 
+darkBackground();
+auto_save('southwest'); 
+
+figure();
+plot(x, y);
+scaleBar('orientation', 'southeast'); 
+darkBackground();
+auto_save('southeast'); 
+
+figure();
+plot(x, y);
+scaleBar('orientation', 'northeast');
+darkBackground();
+auto_save('northeast');
+
+figure();
+plot(x, y);
+scaleBar('orientation', 'northwest'); 
+darkBackground();
+auto_save('northwest'); 
