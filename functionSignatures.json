@@ -1,0 +1,77 @@
+{
+   "_schemaVersion": "1.0.0",
+   "scaleBar": {
+      "inputs": [
+         {
+            "name": "ax",
+            "kind": "required",
+            "type": [
+               "matlab.graphics.axis.Axes",
+               "scalar"
+            ],
+            "purpose": "Axes (default=gca())"
+         },
+         {
+            "name": "barLength",
+            "kind": "namevalue",
+            "type": [
+               "numeric",
+               "vector"
+            ],
+            "purpose": "Length of bars (default = [diff(xtick) diff(ytick)]"
+         },
+         {
+            "name": "barOrigin",
+            "kind": "namevalue",
+            "type": [
+               "numeric",
+               "vector"
+            ],
+            "purpose": "Origin of bars (default = [min(xlim) min(ylim)]"
+         },
+         {
+            "name": "xUnitsStr",
+            "kind": "namevalue",
+            "type": [
+               "char"
+            ],
+            "purpose": "Units string (default='')"
+         },
+         {
+            "name": "yUnitsStr",
+            "kind": "namevalue",
+            "type": [
+               "char"
+            ],
+            "purpose": "Units string (default='')"
+         },
+         {
+            "name": "numDecimals",
+            "kind": "namevalue",
+            "type": [
+               "numeric",
+               "scalar"
+            ],
+            "purpose": "Number of label decimals (default=2)"
+         },
+         {
+            "name": "xBarOnly",
+            "kind": "namevalue",
+            "type": [
+               "logical",
+               "scalar"
+            ],
+            "purpose": "Only plot x scale bar (default=false)"
+         },
+         {
+            "name": "yBarOnly",
+            "kind": "namevalue",
+            "type": [
+               "logical",
+               "scalar"
+            ],
+            "purpose": "Only plot y scale bar (default=false)"
+         }
+      ]
+   }
+}
