@@ -30,6 +30,15 @@
             "purpose": "Origin of bars (default = [min(xlim) min(ylim)]"
          },
          {
+            "name": "orientation",
+            "kind": "namevalue",
+            "type": [
+               "char",
+               "choices={'southwest','northeast','northwest', 'southeast'}"
+            ],
+            "purpose": "Orientation of scale bars (default = 'southwest')"
+         },
+         {
             "name": "xUnitsStr",
             "kind": "namevalue",
             "type": [
