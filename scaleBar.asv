@@ -215,10 +215,18 @@ classdef scaleBar
                     avgXFun = @minus; 
             end
             switch obj.orientation 
-                case {'northeast', 'northwest'}
-                    avgYFun = @minus;
-                case {'southeast', 'southwest'}
-                    avgYFun = @plus;
+                case 'northeast'
+                    avgXFun = @plus; 
+                    avgYFun = @minus; 
+                case 'southeast'
+                    avgXFun = @plus; 
+                    avgYFun = @plus; 
+                case 'southwest'
+                    avgXFun = @minus; 
+                    avgYFun = @plus; 
+                case 'northwest'
+                    avgXFun = @minus; 
+                    avgYFun = @minus; 
             end
             avgX = avgXFun(obj.barOrigin(1), obj.barLength(1)/2); 
             avgY = avgYFun(obj.barOrigin(2), obj.barLength(2)/2); 
