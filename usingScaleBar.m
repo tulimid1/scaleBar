@@ -12,6 +12,7 @@ x = linspace(0, 2*pi, 1e3);
 y = sin(x);
 plot(x, y);
 scaleBar(); 
+darkBackground();
 auto_save('ex1a'); 
 
 %% Define value precision 
@@ -21,6 +22,7 @@ x = linspace(0, 2*pi, 1e3);
 y = sin(x);
 plot(x, y);
 scaleBar('numDecimals', 3); 
+darkBackground();
 auto_save('ex2a'); 
 
 %% Just x bar 
@@ -29,6 +31,7 @@ x = linspace(0, 2*pi, 1e3);
 y = sin(x);
 plot(x, y);
 scaleBar('xBarOnly', true); 
+darkBackground();
 auto_save('ex3a'); 
 
 %% Just y bar 
@@ -37,6 +40,7 @@ x = linspace(0, 2*pi, 1e3);
 y = sin(x);
 plot(x, y);
 scaleBar('yBarOnly', true); 
+darkBackground();
 auto_save('ex4a'); 
 
 %% Move to new location 
@@ -45,6 +49,7 @@ x = linspace(0, 2*pi, 1e3);
 y = sin(x);
 plot(x, y);
 scaleBar('barOrigin', [1 -0.2]); 
+darkBackground();
 auto_save('ex5a'); 
 
 %% Different figure
@@ -54,21 +59,25 @@ y = cos(x);
 figure();
 plot(x, y);
 scaleBar(); 
+darkBackground();
 auto_save('ex1b'); 
 
 figure();
 plot(x, y);
 scaleBar('xBarOnly', true); 
+darkBackground();
 auto_save('ex3b'); 
 
 figure();
 plot(x, y);
 scaleBar('yBarOnly', true); 
+darkBackground();
 auto_save('ex4b'); 
 
 figure();
 plot(x, y);
 scaleBar('barOrigin', [pi -0.2]); 
+darkBackground();
 auto_save('ex5b'); 
 
 %% Different magnitude 
@@ -78,19 +87,23 @@ y = cos(x)*5;
 figure();
 plot(x, y);
 scaleBar(); 
+darkBackground();
 auto_save('ex1c'); 
 
 figure();
 plot(x, y);
 scaleBar('xBarOnly', true); 
+darkBackground();
 auto_save('ex3c'); 
 
 figure();
 plot(x, y);
 scaleBar('yBarOnly', true); 
+darkBackground();
 auto_save('ex4c'); 
 
 figure();
 plot(x, y);
 scaleBar('barOrigin', [pi -0.2]); 
+darkBackground();
 auto_save('ex5c'); 
