@@ -76,6 +76,13 @@ Origin of bar. (default = lower left corner of axes)
 
 Data Types: (vector [1 x 2], numeric)
 
+### ```orientation```
+Orientation of scale bars. (default = 'southwest')
+
+How to orient scale bars. 
+
+Data Types: (string: 'northeast', 'northwest', 'southeast', 'southwest')
+
 ### ```xUnitsStr```
 String for x-units (default = '')
 
